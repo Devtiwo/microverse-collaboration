@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey Form</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking time to improve the platform!</p>
+    <div>
+        <form id="survey-form">
+            <label for="name-label">Name:
+                <input type="text" name="" id="name-label" placeholder="Enter your fullname">
+            </label>
+            <label for="email-label">Email:
+                <input type="email" name="" id="email-label" placeholder="Enter your email address" required>
+            </label>
+            <label for="number-label">Phone Number:
+                <input type="number" name="number-label" id="number" min="1" max="11" placeholder="Enter your phone number" required>
+            </label>
+            <label for="dropdown">What option describes your current role?</label>
+            <select name="" id="dropdown">
+                <option value="fe">Frontend Developer</option>
+                <option value="be">Backend Developer</option>
+                <option value="fs">Fullstack Developer</option>
+            </select>
+            <div>
+                <p>Would you recommend Microverse to anyone?</p>
+                <input type="radio" name="recommend" id=""><label for="">Yes</label>
+                <input type="radio" name="recommend" id=""><label for="">No</label>
+                <input type="radio" name="recommend" id=""><label for="">Maybe</label>
+            </div>
+            <div>
+                <p>What part of the curriculum would you like to see improvement on?</p>
+                <input type="checkbox" value="db"><label for="">Database</label>
+                <input type="checkbox" value="alg"><label for="">Algorithms</label>
+                <input type="checkbox" value="ds"><label for="">Data Structure</label>
+            </div>
+            <div>
+                <p>Any suggestions or comments?</p>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+            
+        </form>
+    </div>
+
 </body>
 </html>
