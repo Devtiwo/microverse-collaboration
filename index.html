@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Survey Form</title>
 </head>
 <body>
@@ -11,39 +12,63 @@
     <p id="description">Thank you for taking time to improve the platform!</p>
     <div>
         <form id="survey-form">
-            <label for="name-label">Name:
-                <input type="text" name="" id="name-label" placeholder="Enter your fullname">
-            </label>
-            <label for="email-label">Email:
-                <input type="email" name="" id="email-label" placeholder="Enter your email address" required>
-            </label>
-            <label for="number-label">Phone Number:
-                <input type="number" name="number-label" id="number" min="1" max="11" placeholder="Enter your phone number" required>
-            </label>
-            <label for="dropdown">What option describes your current role?</label>
-            <select name="" id="dropdown">
-                <option value="fe">Frontend Developer</option>
-                <option value="be">Backend Developer</option>
-                <option value="fs">Fullstack Developer</option>
-            </select>
-            <div>
+            <div class="formgroup">
+                <label for="name" id="name-label">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="formgroup">
+                <label for="email" id="email-label">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="formgroup">
+                <label for="number" id="number-label">Phone Number:</label>
+                <input type="text" id="number" placeholder="Enter your phone number" min="1" max="" required>
+            </div>
+            <div class="formgroup">
+                <p>What option describes your current role?</p>
+                <select id="dropdown">
+                    <option value="">--Select your choice--</option>
+                    <option value="fe">Frontend Developer</option>
+                    <option value="be">Backend Developer</option>
+                    <option value="fs">Fullstack Developer</option>
+                </select>
+            </div>
+            <div class="formgroup">
                 <p>Would you recommend Microverse to anyone?</p>
-                <input type="radio" name="recommend" id=""><label for="">Yes</label>
-                <input type="radio" name="recommend" id=""><label for="">No</label>
-                <input type="radio" name="recommend" id=""><label for="">Maybe</label>
+                <div>
+                    <input type="radio" name="recommend" id="yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" name="recommend" id="no">
+                    <label for="no">No</label>
+                </div>
+                <div>
+                    <input type="radio" name="recommend" id="maybe">
+                    <label for="maybe">Maybe</label>
+                </div>
             </div>
-            <div>
+            <div class="formgroup">
                 <p>What part of the curriculum would you like to see improvement on?</p>
-                <input type="checkbox" value="db"><label for="">Database</label>
-                <input type="checkbox" value="alg"><label for="">Algorithms</label>
-                <input type="checkbox" value="ds"><label for="">Data Structure</label>
+                <div>
+                    <input type="checkbox" value="database" id="database">
+                    <label for="database">Database</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="algorithms" id="algorithms">
+                    <label for="algorithms">Algorithms</label>
+                </div>
+                <div>
+                    <input type="checkbox" value="data-structure" id="data-structure">
+                    <label for="data-structure">Data Structure</label>
+                </div>
             </div>
-            <div>
+            <div class="formgroup">
                 <p>Any suggestions or comments?</p>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="comment" cols="30" rows="10"></textarea>
             </div>
-            <button type="submit">Submit</button>
-            
+            <button type="submit" id="submit">Submit</button>
+        
         </form>
     </div>
 
